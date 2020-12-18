@@ -1,11 +1,12 @@
 {
   "name": "task-manager",
   "version": "1.0.0",
-  "description": "Task app with user auth and relation",
+  "description": "Task app with user auth and user/task relation",
   "main": "index.js",
   "scripts": {
     "start": "node src/index.js",
-    "dev": "nodemon src/index.js"
+    "dev": "nodemon src/index.js",
+    "test": "mocha --config .mocharc.json --watch"
   },
   "keywords": [],
   "author": "Vasko Raketic",
@@ -23,6 +24,9 @@
     "validator": "^13.1.17"
   },
   "devDependencies": {
-    "nodemon": "^2.0.6"
+    "expect": "^26.6.2",
+    "mocha": "^8.2.1",
+    "nodemon": "^2.0.6",
+    "supertest": "^6.0.1"
   }
 }

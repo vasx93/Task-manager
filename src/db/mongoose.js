@@ -1,9 +1,11 @@
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
 
-mongoose.connect(process.env.DB_HOST,
-{
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useCreateIndex: true,
-  useFindAndModify: false,
-})
+mongoose
+	.connect(process.env.DB_LOCAL, {
+		useNewUrlParser: true,
+		useUnifiedTopology: true,
+		useCreateIndex: true,
+		useFindAndModify: false,
+	})
+	.then(db => console.log(`MongoDB connection  successful!`))
+	.catch(err => console.log(err));
