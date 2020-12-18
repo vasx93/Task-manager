@@ -1,4 +1,4 @@
 node_modules
 .env
 setup.txt
-dir_to_ignore/fixtures/
+fixtures/
